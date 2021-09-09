@@ -1,0 +1,66 @@
+{
+  "name": "@programic/eslint-config-vue3-typescript",
+  "version": "1.0.0",
+  "description": "Programic's Vue 3 + Typescript ESLint config, following our styleguide.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "jest ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/programic/eslint-config-vue3-typescript"
+  },
+  "keywords": [
+    "style guide",
+    "programic",
+    "lint",
+    "vue",
+    "vue3",
+    "typescript",
+    "eslint",
+    "es2018",
+    "es2017",
+    "es2016",
+    "es2015",
+    "es6"
+  ],
+  "author": "Thimon Wentink (https://github.com/thimonwentink)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/programic/eslint-config-vue3-typescript/issues"
+  },
+  "homepage": "https://programic.com",
+  "engines": {
+    "node": ">= 6"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0",
+    "eslint": "^5.16.0 || ^6.8.0 || ^7.2.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.23.4",
+    "typescript": ">=3.3.1",
+    "vue-eslint-parser": "^7.10.0"
+  },
+  "dependencies": {
+    "@programic/eslint-config-base": "^2.0.0",
+    "@programic/eslint-config-typescript": "^1.0.0",
+    "@programic/eslint-config-vue3": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^7.28.0",
+    "@types/jest": "^26.0.24",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "eslint": "^7.31.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.4.0",
+    "eslint-plugin-vue": "^7.15.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.4",
+    "typescript": "^4.3.5",
+    "vue-eslint-parser": "^7.10.0"
+  }
+}
