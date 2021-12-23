@@ -34,4 +34,16 @@ module.exports = {
       rules: { indent: 'off' },
     },
   ],
+
+  rules: {
+    'unicorn/prevent-abbreviations': ['error', {
+      checkShorthandProperties: true,
+      checkProperties: true,
+      ignore: [
+        /^src$/i,
+        // Vue specific ignores
+        /attrs|params|prop|props|ref|refs/i,
+      ],
+    }],
+  },
 };

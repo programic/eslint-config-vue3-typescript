@@ -10,9 +10,9 @@ const expectIsObject = (value: unknown) => {
   expect(typeof value).toBe('object');
   expect(Array.isArray(value)).toBe(false);
 };
-const expectIsArrayOfLength = (arr: unknown, length: number) => {
-  expect(Array.isArray(arr)).toBe(true);
-  expect(arr).toHaveLength(length);
+const expectIsArrayOfLength = (givenArray: unknown, length: number) => {
+  expect(Array.isArray(givenArray)).toBe(true);
+  expect(givenArray).toHaveLength(length);
 };
 const getOverrideForJSFiles = (overrides:ConfigOverride[]) => {
   return overrides.find((override:ConfigOverride) => {
