@@ -5,16 +5,18 @@ import ConfigOverride = Linter.ConfigOverride;
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const config:Config = require('../..');
 
-const expectIsObject = (value: unknown) => {
+const expectIsObject = (value: unknown): void => {
   expect(value).not.toBeNull();
   expect(typeof value).toBe('object');
   expect(Array.isArray(value)).toBe(false);
 };
-const expectIsArrayOfLength = (givenArray: unknown, length: number) => {
+const expectIsArrayOfLength = (givenArray: unknown, length: number): void => {
   expect(Array.isArray(givenArray)).toBe(true);
   expect(givenArray).toHaveLength(length);
 };
-const getOverrideForJSFiles = (overrides:ConfigOverride[]) => {
+const getOverrideForJSFiles = (
+  overrides: Array<ConfigOverride>,
+): Linter.ConfigOverride<Linter.RulesRecord> | undefined => {
   return overrides.find((override:ConfigOverride) => {
     return Array.isArray(override.files)
       && override.files.length === 1
