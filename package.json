@@ -1,6 +1,6 @@
 {
   "name": "@programic/eslint-config-vue3-typescript",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "Programic's Vue 3 + Typescript ESLint config, following our styleguide.",
   "main": "index.js",
   "scripts": {
@@ -45,14 +45,14 @@
   },
   "dependencies": {
     "@programic/eslint-config-base": "^6.0.1",
-    "@programic/eslint-config-typescript": "^5.0.0",
+    "@programic/eslint-config-typescript": "^8.0.0",
     "@programic/eslint-config-vue3": "^4.0.1"
   },
   "devDependencies": {
     "@types/eslint": "^7.28.0",
     "@types/jest": "^26.0.24",
-    "@typescript-eslint/eslint-plugin": "^4.28.5",
-    "@typescript-eslint/parser": "^4.28.5",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
     "eslint": "^7.31.0",
     "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-import": "^2.23.4",

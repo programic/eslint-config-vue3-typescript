@@ -1,11 +1,19 @@
-module.exports = {
-  parser: 'vue-eslint-parser',
+/* eslint-disable no-var, object-shorthand */
+var typescriptOverride = require('@programic/eslint-config-typescript/typescript-override');
 
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-    parser: '@typescript-eslint/parser',
-  },
+var parser = 'vue-eslint-parser';
+var parserOptions = {
+  ecmaVersion: 2018,
+  sourceType: 'module',
+  parser: '@typescript-eslint/parser',
+  extraFileExtensions: ['.vue'],
+  project: './tsconfig.json',
+};
+
+module.exports = {
+  parser: parser,
+
+  parserOptions: parserOptions,
 
   settings: {
     'import/resolver': {
@@ -18,11 +26,6 @@ module.exports = {
     '@typescript-eslint',
   ],
 
-  extends: [
-    '@programic/eslint-config-vue3',
-    '@programic/eslint-config-typescript',
-  ],
-
   overrides: [
     {
       files: ['*.js'],
@@ -30,20 +33,25 @@ module.exports = {
       extends: ['@programic/eslint-config-base'],
     },
     {
-      files: ['*.vue'],
-      rules: { indent: 'off' },
+      files: ['*.ts', '*.tsx', '*.vue'],
+      parser: parser,
+      parserOptions: parserOptions,
+      extends: [
+        '@programic/eslint-config-vue3',
+        'plugin:@typescript-eslint/recommended',
+      ],
+      rules: Object.assign(typescriptOverride.rules, {
+        indent: 'off',
+        'unicorn/prevent-abbreviations': ['error', {
+          checkShorthandProperties: true,
+          checkProperties: true,
+          ignore: [
+            /^src$/i,
+            // Vue specific ignores
+            /attrs|params|prop|props|ref|refs/i,
+          ],
+        }],
+      }),
     },
   ],
-
-  rules: {
-    'unicorn/prevent-abbreviations': ['error', {
-      checkShorthandProperties: true,
-      checkProperties: true,
-      ignore: [
-        /^src$/i,
-        // Vue specific ignores
-        /attrs|params|prop|props|ref|refs/i,
-      ],
-    }],
-  },
 };
