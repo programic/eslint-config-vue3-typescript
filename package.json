@@ -1,6 +1,6 @@
 {
   "name": "@programic/eslint-config-vue3-typescript",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "description": "Programic's Vue 3 + Typescript ESLint config, following our styleguide.",
   "main": "index.js",
   "scripts": {
@@ -35,32 +35,33 @@
     "node": ">= 6"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.25.0",
-    "@typescript-eslint/parser": "^5.25.0",
-    "eslint": "^5.16.0 || ^6.8.0 || ^7.2.0",
-    "eslint-import-resolver-typescript": "^2.4.0",
-    "eslint-plugin-import": "^2.23.4",
-    "typescript": ">=3.8.0",
-    "vue-eslint-parser": "^7.10.0"
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^7.5.0 || ^8.2.0",
+    "eslint-import-resolver-typescript": "^3.4.1",
+    "eslint-plugin-import": "^2.26.0",
+    "typescript": "^4.7.4",
+    "vue-eslint-parser": "^9.0.3"
   },
   "dependencies": {
-    "@programic/eslint-config-base": "^7.0.3",
-    "@programic/eslint-config-typescript": "^10.0.0",
-    "@programic/eslint-config-vue3": "^5.0.1"
+    "@programic/eslint-config-base": "^8.0.0",
+    "@programic/eslint-config-typescript": "^12.0.2",
+    "@programic/eslint-config-vue3": "^6.0.0"
   },
   "devDependencies": {
-    "@types/eslint": "^7.28.0",
-    "@types/jest": "^26.0.24",
-    "@typescript-eslint/eslint-plugin": "^5.25.0",
-    "@typescript-eslint/parser": "^5.25.0",
-    "eslint": "^7.31.0",
-    "eslint-import-resolver-typescript": "^2.4.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jest": "^24.4.0",
-    "eslint-plugin-vue": "^7.15.0",
-    "jest": "^27.0.6",
-    "ts-jest": "^27.0.4",
-    "typescript": "^4.3.5",
-    "vue-eslint-parser": "^7.10.0"
+    "@programic/eslint-plugin": "^1.0.1",
+    "@types/eslint": "^8.4.5",
+    "@types/jest": "^27.5.1",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "eslint-import-resolver-typescript": "^3.2.7",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.8.3",
+    "eslint-plugin-vue": "^9.3.0",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.5",
+    "typescript": "^4.7.4",
+    "vue-eslint-parser": "^9.0.3"
   }
 }

@@ -13,6 +13,7 @@
     "jest/globals": true
   },
   "rules": {
+    "jest/no-conditional-in-test": "off",
     "jest/prefer-expect-assertions": ["error", {
       "onlyFunctionsWithAsyncKeyword": true
     }]
